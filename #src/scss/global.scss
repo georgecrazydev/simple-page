@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    @include quicksand;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 60px;
+    color: $color-title;
+    span {
+        font-weight: 500;
+    }
+}
+h4 {
+    font-size: 15px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    color: #8D96BD;
+}
+h5 {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $color-title;
+}
+
+body {
+    @include roboto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    color: $color-main;
+}
+
+.section-outer {
+    border-bottom: 1px solid #D8E3FE;
+}
+
+.section-inner {
+    max-width: 930px;
+    margin: 0 auto;
+    padding: 120px 15px;
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+    padding: 13px 15px;
+    @include quicksand;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #3A79FF;
+    background-color: #D2E1FF;
+    border-radius: 2px;
+    display: block;
+    &:hover {
+        background-color: #bfd2f8;
+    }
+}
+
+.slick-dots {
+    display: flex;
+    margin-bottom: 28px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    list-style: none;
+    li {
+        & + li {
+            margin-left: 12px;
+        }
+        &.slick-active {
+            button {
+                background-color: #5283FF;
+            }
+        }
+        button {
+            cursor: pointer;
+            outline: none;
+            border: none;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: #D1D6E3;
+        }
+    }
+}
+
+.blog-slider {
+    .slick-dots {
+        bottom: -100px;
+    }
+}

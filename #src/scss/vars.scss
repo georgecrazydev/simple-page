@@ -1,0 +1,13 @@
+// Mixins
+
+@mixin quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+@mixin roboto {
+    font-family: 'Roboto', sans-serif;
+}
+// Variables
+$color-main: #8d96bd;
+$color-title: #3D4F9F;
+
